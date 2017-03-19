@@ -1,0 +1,33 @@
+
+<section class="insert">
+    <h3>Request Form</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="title">Task Name:</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div class="input">
+            <label for="content">Description:</label>
+            <input type="text" id="desc" name="desc">
+        </div>
+        <div class="input">
+            <label for="author">NumOfContributers:</label>
+            <input type="text" id="cont" name="cont">
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</section>
+<section class="get">
+    
+    <a href="/get-data">GET DATA</a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>Task Name : {{ this.title }}</div>
+                <div>Descrption: {{ this.desc }}</div>
+                <div>Contributers: {{ this.cont }}</div>
+                {{!--<div>ID: {{ this._id }}</div>--}}
+            </article>
+        {{/each}}
+    </div>
+</section>
